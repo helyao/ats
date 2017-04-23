@@ -1,0 +1,156 @@
+{% extends "base/base.html" %}
+{% block page_content %}
+<!-- top tiles -->
+    <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-bus"></i> 吊舱设备总量 </span>
+            <div class="count">72</div>
+            <span class="count_bottom">离线检修设备数
+                <i class="red"><i class="fa"></i>3</i>
+            </span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-archive"></i> 轨旁设备总量 </span>
+            <div class="count">112</div>
+            <span class="count_bottom">离线检修设备数
+                <i class="red"><i class="fa"></i>0</i>
+            </span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-calendar"></i> 系统运行天数 </span>
+            <div class="count">17</div>
+            <span class="count_bottom">连续运行天数
+                <i class="green"><i class="fa"></i>17</i>
+            </span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-line-chart"></i> 故障发生总数 </span>
+            <div class="count">17</div>
+            <span class="count_bottom">今日已发生次数
+                <i class="red"><i class="fa"></i>3</i>
+            </span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-star"></i> 总运行次数 </span>
+            <div class="count">79</div>
+            <span class="count_bottom">当天已运行次数
+                <i class="green"><i class="fa"></i>3</i>
+            </span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-bar-chart"></i> 本月运行公里数 </span>
+            <div class="count">124</div>
+            <span class="count_bottom">数据统计截止至
+                <i class="blue"><i class="fa"></i>2017年04月20日</i>
+            </span>
+        </div>
+    </div>
+<!-- /top tiles -->
+
+<!-- info tiles -->
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h3>当日故障信息列表</h3>
+                </div>
+                <div class="x_content">
+                    <table id="index-tab-bug" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>计数</th>
+                                <th>时间</th>
+                                <th>故障编号</th>
+                                <th>故障等级</th>
+                                <th>故障内容</th>
+                                <th>设备类型</th>
+                                <th>设备编号</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>14:32:12</td>
+                                <td>65</td>
+                                <td>II</td>
+                                <td>换道失败</td>
+                                <td>吊舱</td>
+                                <td>L0032</td>
+                                <td>未解决</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>10:12:45</td>
+                                <td>64</td>
+                                <td>III</td>
+                                <td>设备短期失联</td>
+                                <td>吊舱</td>
+                                <td>L0103</td>
+                                <td>已解决</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>09:32:12</td>
+                                <td>63</td>
+                                <td>III</td>
+                                <td>设备短期失联</td>
+                                <td>轨旁</td>
+                                <td>E0019</td>
+                                <td>已解决</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h3>当日路由请求列表</h3>
+                </div>
+                <div class="x_content">
+                    <table id="index-tab-route" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>计数</th>
+                                <th>时间</th>
+                                <th>吊舱编号</th>
+                                <th>起点</th>
+                                <th>终点</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>15:32:12</td>
+                                <td>L0123</td>
+                                <td>S01</td>
+                                <td>S07</td>
+                                <td>发送成功</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>15:31:02</td>
+                                <td>L0043</td>
+                                <td>S05</td>
+                                <td>S02</td>
+                                <td>发送成功</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>15:27:43</td>
+                                <td>L0031</td>
+                                <td>S02</td>
+                                <td>S05</td>
+                                <td>发送成功</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- /info tiles -->
+{% endblock %}
